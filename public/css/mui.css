@@ -2686,7 +2686,7 @@ input[type='color']
     -webkit-user-select: text;
 
     border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 3px;
+    border-radius: 0px;
     outline: none;
     background-color: #fff;
 
@@ -3127,7 +3127,7 @@ select:focus
     cursor: pointer;
 
     border: 0;
-    border-radius: 3px;
+    border-radius: 0px;
     outline: none;
     background-color: #999;
 
