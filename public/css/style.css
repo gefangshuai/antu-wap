@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mui-content {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .bar-nav-black {
@@ -141,3 +141,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #FF5A5F;
 }
 
+.mui-bar-absolute{
+    position: absolute;
+}
