@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mui-content {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .bar-nav-black {
@@ -45,11 +45,25 @@ h1, h2, h3, h4, h5, h6 {
     top: 15px;
 }
 
+.border-right {
+    border-right: 1px solid #eee;
+}
+
 .nav-text {
     cursor: pointer;
     margin-top: 20px;
     color: #ffffff;
     font-size: 24px;
+}
+
+.nav-user {
+    background: url('../imgs/grzx_icon_nor.png') no-repeat;
+    background-size: 44px 44px;
+    position: absolute;
+    right: -20px;
+    width: 94px;
+    height: 44px;
+    top: 15px;
 }
 
 .mui-bar .mui-title {
@@ -117,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    border:0px;
+    border: 0px;
     background-color: #fff;
     background-clip: padding-box;
 }
@@ -126,6 +140,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #51BFFE;
     color: #fff;
 }
+
 .btn-red {
     background: #FF5A5F;
     color: #fff;
@@ -141,6 +156,16 @@ h1, h2, h3, h4, h5, h6 {
     color: #FF5A5F;
 }
 
-.mui-bar-absolute{
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+    margin-bottom: 10px;
+    border-bottom: 0px;
+}
+
+.mui-bar-absolute {
     position: absolute;
+}
+
+.mui-grid-view.mui-grid-9 .mui-table-view-cell > a:not(.mui-btn) {
+    margin: 0;
+    padding: 0;
 }
