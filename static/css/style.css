@@ -100,6 +100,16 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
 }
 
+.font18 {
+    font-size: 18px;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+
+
 .flex-form {
     display: flex;
 }
@@ -168,4 +178,33 @@ h1, h2, h3, h4, h5, h6 {
 .mui-grid-view.mui-grid-9 .mui-table-view-cell > a:not(.mui-btn) {
     margin: 0;
     padding: 0;
+}
+.mui-table-view-cell-nopad {
+    position: relative;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+}
+
+.list-item-desc {
+    font-size: 14px;
+    position: absolute;
+    bottom: 3px;
+    background: rgba(238, 238, 238, 0.66);
+    padding: 15px 0px;
+    height: 50px;
+    width: 100%;
+}
+
+.list-item-desc span.span-item {
+    padding: 0px 10px;
+    border-right: 1px solid #777777;
+}
+.list-item-desc span.span-item-noborder {
+    padding: 0px 10px;
+}
+.margin20-r {
+    margin-right: 10px;
+}
+.margin20-b {
+    margin-bottom: 20px;
 }
