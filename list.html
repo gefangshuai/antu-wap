@@ -18,13 +18,13 @@
 
 <div style="position: fixed; width: 100%; z-index: 999; top: 65px;" id="nav">
     <ul class="mui-table-view mui-grid-view mui-grid-9 tab-nav" style="padding-top: 20px;">
-        <li class=" mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" data-target="#locations"
+        <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" data-target="#locations"
             style="border-right: 2px solid #eee">
             <a href="#" class="color-black font20">位置</a>
             <div class="tab-nav-border"></div>
         </li>
-        <li class=" mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
-            <a href="#" class="color-black font20" id="choose">筛选</a>
+        <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" data-target="#choose">
+            <a href="#" class="color-black font20">筛选</a>
             <div class="tab-nav-border"></div>
         </li>
     </ul>
@@ -40,6 +40,78 @@
         <button class="mui-btn mui-btn-block btn-red"
                 style="padding: 15px 0; font-size: 16px; position: absolute; bottom: 0;">不限
         </button>
+    </div>
+    <div id="choose" class="tab-sub-nav">
+        <div class="choose-level-1">
+            <ul>
+                <li class="" data-target="#t1">
+                    <a href="#">户型</a>
+                </li>
+                <li class="active" data-target="#t2">
+                    <a href="#">配套</a>
+                </li>
+                <li data-target="#t3"><a href="#">宜居人数</a></li>
+            </ul>
+            <button class="mui-btn mui-btn-block btn-red-alpha">不限
+            </button>
+        </div>
+        <div class="choose-level-2">
+            <ul id="t1" class="mui-hidden">
+                <li class="active">
+                    <a href="#">不限</a>
+                </li>
+                <li>
+                    <a href="#">一居室</a>
+                </li>
+                <li>
+                    <a href="#">二居室</a>
+                </li>
+                <li>
+                    <a href="#">三居室</a>
+                </li>
+                <li>
+                    <a href="#">四居室</a>
+                </li>
+            </ul>
+            <ul id="t2">
+                <li class="active">
+                    <a href="#">不限</a>
+                </li>
+                <li>
+                    <a href="#">热水</a>
+                </li>
+                <li>
+                    <a href="#">洗漱用品</a>
+                </li>
+                <li>
+                    <a href="#">WIFI</a>
+                </li>
+                <li>
+                    <a href="#">少发</a>
+                </li>
+            </ul>
+            <ul id="t3" class="mui-hidden">
+                <li class="active">
+                    <a href="#">不限</a>
+                </li>
+                <li>
+                    <a href="#">2人</a>
+                </li>
+                <li>
+                    <a href="#">3人</a>
+                </li>
+                <li>
+                    <a href="#">4人</a>
+                </li>
+                <li>
+                    <a href="#">5人</a>
+                </li>
+            </ul>
+            <button class="mui-btn mui-btn-block btn-red">
+                确定
+            </button>
+        </div>
+
     </div>
 </div>
 
@@ -122,11 +194,39 @@
             var $this = $(this);
             $this.addClass('active');
             var target = $this.data('target');
+            $(target).siblings('div').hide();
             $(target).slideToggle();
         });
 
         $('div.mui-content').click(function (e) {
             $('div.tab-sub-nav').slideUp();
+        });
+
+        $('#locations li').on('click', function (e) {
+            e.preventDefault();
+            var $this = $(this);
+            $('#locations li').removeClass('active');
+            $this.addClass('active');
+        });
+
+        $('.choose-level-1 li').on('click', function (e) {
+            e.preventDefault();
+            var $this = $(this);
+            $('.choose-level-1 li').removeClass('active');
+            $this.addClass('active');
+            $('.choose-level-2>ul').addClass('mui-hidden');
+            $($this.data('target')).removeClass('mui-hidden');
+        });
+
+        $('.choose-level-2 li').on('click', function (e) {
+            e.preventDefault();
+            var $this = $(this);
+            if ($this.hasClass('active')) {
+                $this.removeClass('active');
+            } else {
+                $this.addClass('active');
+            }
+
         });
     })();
 </script>
