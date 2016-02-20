@@ -318,6 +318,8 @@ ul.tab-nav > li.active > div.tab-nav-border {
 }
 
 .choose-level-2 ul {
+    overflow-y: auto;
+    height: 340px;
     padding: 0 20px;
 }
 
