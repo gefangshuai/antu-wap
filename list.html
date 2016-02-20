@@ -15,15 +15,35 @@
     <h1 class="mui-title">成都</h1>
     <a href="#" class="nav-user"></a>
 </header>
-<div class="mui-content">
-    <ul class="mui-table-view mui-grid-view mui-grid-9" style="padding-top: 20px;">
-        <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="border-right: 1px solid #eee">
+
+<div style="position: fixed; width: 100%; z-index: 999; top: 65px;" id="nav">
+    <ul class="mui-table-view mui-grid-view mui-grid-9 tab-nav" style="padding-top: 20px;">
+        <li class=" mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" data-target="#locations"
+            style="border-right: 2px solid #eee">
             <a href="#" class="color-black font20">位置</a>
+            <div class="tab-nav-border"></div>
         </li>
-        <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
-            <a href="#" class="color-black font20">筛选</a>
+        <li class=" mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+            <a href="#" class="color-black font20" id="choose">筛选</a>
+            <div class="tab-nav-border"></div>
         </li>
     </ul>
+    <div id="locations" class="tab-sub-nav">
+        <ul>
+            <li class="">
+                <a href="#">九眼桥</a>
+            </li>
+            <li>
+                <a href="#">宽窄巷子</a>
+            </li>
+        </ul>
+        <button class="mui-btn mui-btn-block btn-red"
+                style="padding: 15px 0; font-size: 16px; position: absolute; bottom: 0;">不限
+        </button>
+    </div>
+</div>
+
+<div class="mui-content">
     <div class="mui-content-padded">
         <ul class="mui-table-view margin20-b">
             <li class="mui-table-view-cell-nopad">
@@ -91,5 +111,24 @@
     </div>
 </div>
 <script src="static/jquery/jquery.min.js"></script>
+<script>
+    (function () {
+        var resetNav = function () {
+            $('ul.tab-nav>li').removeClass('active');
+        };
+        $('ul.tab-nav>li').on('click', function (e) {
+            e.preventDefault();
+            resetNav();
+            var $this = $(this);
+            $this.addClass('active');
+            var target = $this.data('target');
+            $(target).slideToggle();
+        });
+
+        $('div.mui-content').click(function (e) {
+            $('div.tab-sub-nav').slideUp();
+        });
+    })();
+</script>
 </body>
 </html>

@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 .bar-nav-black {
     background: #323232;
     color: #ffffff;
+    z-index: 99999;
 }
 
 .bar-nav-black .mui-title {
@@ -108,8 +109,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
 }
 
-
-
 .flex-form {
     display: flex;
 }
@@ -167,7 +166,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mui-grid-view.mui-grid-9 .mui-table-view-cell {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding: 10px 0 20px 0;
     border-bottom: 0px;
 }
 
@@ -179,6 +179,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
 }
+
 .mui-table-view-cell-nopad {
     position: relative;
     overflow: hidden;
@@ -199,12 +200,63 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px 10px;
     border-right: 1px solid #777777;
 }
+
 .list-item-desc span.span-item-noborder {
     padding: 0px 10px;
 }
+
 .margin20-r {
     margin-right: 10px;
 }
+
 .margin20-b {
     margin-bottom: 20px;
+}
+
+div.tab-sub-nav {
+    display: none;
+    position: absolute;
+    top: 73px;
+    z-index: 999;
+    width: 100%;
+    background: #fff;
+    height: 400px;
+}
+
+div.tab-sub-nav > ul {
+    padding: 0 10px;
+}
+
+div.tab-sub-nav > ul > li {
+    list-style: none;
+    text-align: center;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+div.tab-sub-nav > ul > li a {
+    color: #000;
+}
+
+div.tab-sub-nav > ul> li.active a {
+    color: #FF5A5F;
+}
+div.tab-sub-nav > ul> li.active {
+    border-bottom: 1px solid #FF5A5F;
+}
+
+ul.tab-nav > li.active > a {
+    color: #FF5A5F;
+}
+
+div.tab-nav-border {
+    display: none;
+}
+
+ul.tab-nav > li.active > div.tab-nav-border {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #FF5A5F;
+    position: absolute;
+    bottom: 0px;
 }
