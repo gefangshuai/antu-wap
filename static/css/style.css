@@ -1,6 +1,5 @@
 body {
     font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    min-width: 420px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -420,6 +419,7 @@ ul.tab-nav > li.active > div.tab-nav-border {
     width: 100%;
     background: #fff;
 }
+
 .left-btn {
     background: url("../imgs/riqi_icon.png") no-repeat;
     background-position-y: 5px;
@@ -428,8 +428,11 @@ ul.tab-nav > li.active > div.tab-nav-border {
     background-size: 48px;
     float: left;
     padding: 10px 20px 5px 50px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-.right-btn{
+
+.right-btn {
     cursor: pointer;
     width: 35%;
     background: #FF5A5F;
