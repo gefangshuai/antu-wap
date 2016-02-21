@@ -1,5 +1,6 @@
 body {
     font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-width: 420px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -355,7 +356,7 @@ ul.tab-nav > li.active > div.tab-nav-border {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    margin-top: -80px;
+    margin-top: -75px;
     padding: 12px 5px;
     right: 20px;
     position: absolute;
@@ -374,23 +375,69 @@ ul.tab-nav > li.active > div.tab-nav-border {
     margin-bottom: 5px;
 }
 
-.desc-item-1{
+.desc-item-1 {
     background: url("../imgs/fx_icon.png") no-repeat;
     background-position-x: 20px;
     background-size: 48px;
 }
-.desc-item-2{
+
+.desc-item-2 {
     background: url("../imgs/yjrs_icon.png") no-repeat;
     background-position-x: 20px;
     background-size: 48px;
 }
-.desc-item-3{
+
+.desc-item-3 {
     background: url("../imgs/time_icon.png") no-repeat;
     background-position-x: 20px;
     background-size: 48px;
 }
-.desc-item-4{
+
+.desc-item-4 {
     background: url("../imgs/yj_icon.png") no-repeat;
     background-position-x: 20px;
     background-size: 48px;
+}
+
+.bordered {
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    margin: 0 20px;
+}
+
+.local {
+    background: url("../imgs/dw_icon.png") no-repeat;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 20px;
+    margin: 30px 20px 0 30px;
+}
+
+.detail-footer {
+    position: fixed;
+    font-size: 16px;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+.left-btn {
+    background: url("../imgs/riqi_icon.png") no-repeat;
+    background-position-y: 5px;
+    color: #FF5A5F;
+    width: 65%;
+    background-size: 48px;
+    float: left;
+    padding: 10px 20px 5px 50px;
+}
+.right-btn{
+    cursor: pointer;
+    width: 35%;
+    background: #FF5A5F;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    float: right;
+    height: 60px;
+    text-align: center;
+    padding-top: 18px;
 }
