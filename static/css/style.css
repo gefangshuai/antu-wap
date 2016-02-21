@@ -81,6 +81,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
 }
 
+.mui-grid-view.mui-grid-9-grey {
+    background-color: #c8c7cc;
+}
+
 .mui-grid-view.mui-grid-9 .mui-table-view-cell {
     border-right: 0px solid #eee;
 }
@@ -287,6 +291,7 @@ ul.tab-nav > li.active > div.tab-nav-border {
 .choose-level-1 li {
     border: 1px solid #ddd;
 }
+
 .choose-level-1 li.active {
     background: #fff;
     border: 0px;
@@ -299,7 +304,6 @@ ul.tab-nav > li.active > div.tab-nav-border {
     float: left;
 }
 
-
 .choose-level-1 button {
     padding: 14px 0;
     font-size: 16px;
@@ -308,7 +312,7 @@ ul.tab-nav > li.active > div.tab-nav-border {
     bottom: 0;
 }
 
-.choose-level-2{
+.choose-level-2 {
     width: 60%;
     float: right;
 }
@@ -327,7 +331,7 @@ ul.tab-nav > li.active > div.tab-nav-border {
     padding: 0 20px;
 }
 
-.choose-level-2 li.active>a {
+.choose-level-2 li.active > a {
     color: #FF5A5F;
 }
 
@@ -342,6 +346,51 @@ ul.tab-nav > li.active > div.tab-nav-border {
     vertical-align: middle;
     height: 45px;
     width: 100%;
-    padding: 10px ;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
     background: #fff;
+}
+
+.banner-count {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-top: -80px;
+    padding: 12px 5px;
+    right: 20px;
+    position: absolute;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.desc-item {
+    padding-left: 75px;
+    padding-top: 8px;
+
+}
+
+.margin5-b {
+    margin-bottom: 5px;
+}
+
+.desc-item-1{
+    background: url("../imgs/fx_icon.png") no-repeat;
+    background-position-x: 20px;
+    background-size: 48px;
+}
+.desc-item-2{
+    background: url("../imgs/yjrs_icon.png") no-repeat;
+    background-position-x: 20px;
+    background-size: 48px;
+}
+.desc-item-3{
+    background: url("../imgs/time_icon.png") no-repeat;
+    background-position-x: 20px;
+    background-size: 48px;
+}
+.desc-item-4{
+    background: url("../imgs/yj_icon.png") no-repeat;
+    background-position-x: 20px;
+    background-size: 48px;
 }
