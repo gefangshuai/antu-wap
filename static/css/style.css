@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mui-bar {
-    height: 70px;
+    height: 60px;
 }
 
 .logo {
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 94px;
     height: 30px;
-    top: 20px;
+    top: 15px;
 }
 
 .back {
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 94px;
     height: 44px;
-    top: 15px;
+    top: 10px;
 }
 
 .border-right {
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
     right: -20px;
     width: 94px;
     height: 44px;
-    top: 15px;
+    top: 5px;
 }
 
 .mui-bar .mui-title {
@@ -349,23 +349,25 @@ ul.tab-nav > li.active > div.tab-nav-border {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     background: #fff;
+    z-index: inherit;
 }
 
 .banner-count {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    margin-top: -75px;
     padding: 12px 5px;
-    right: 20px;
-    position: absolute;
     border-radius: 50%;
     color: #fff;
+    margin-top: -70px;
+    right: 10px;
+    position: absolute;
     background: rgba(0, 0, 0, 0.25);
+    z-index: inherit;
 }
 
 .desc-item {
-    padding-left: 75px;
+    padding-left: 65px;
     padding-top: 8px;
 
 }
@@ -376,25 +378,25 @@ ul.tab-nav > li.active > div.tab-nav-border {
 
 .desc-item-1 {
     background: url("../imgs/fx_icon.png") no-repeat;
-    background-position-x: 20px;
+    background-position-x: 10px;
     background-size: 48px;
 }
 
 .desc-item-2 {
     background: url("../imgs/yjrs_icon.png") no-repeat;
-    background-position-x: 20px;
+    background-position-x: 10px;
     background-size: 48px;
 }
 
 .desc-item-3 {
     background: url("../imgs/time_icon.png") no-repeat;
-    background-position-x: 20px;
+    background-position-x: 10px;
     background-size: 48px;
 }
 
 .desc-item-4 {
     background: url("../imgs/yj_icon.png") no-repeat;
-    background-position-x: 20px;
+    background-position-x: 10px;
     background-size: 48px;
 }
 
@@ -408,8 +410,8 @@ ul.tab-nav > li.active > div.tab-nav-border {
     background: url("../imgs/dw_icon.png") no-repeat;
     font-size: 15px;
     font-weight: 600;
-    padding: 0 20px;
-    margin: 30px 20px 0 30px;
+    padding-left: 20px;
+    margin: 30px 0px 0 10px;
 }
 
 .detail-footer {
@@ -423,11 +425,12 @@ ul.tab-nav > li.active > div.tab-nav-border {
 .left-btn {
     background: url("../imgs/riqi_icon.png") no-repeat;
     background-position-y: 5px;
+    background-position-x: 10px;
     color: #FF5A5F;
     width: 65%;
     background-size: 48px;
     float: left;
-    padding: 10px 20px 5px 50px;
+    padding: 10px 20px 5px 55px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -443,4 +446,43 @@ ul.tab-nav > li.active > div.tab-nav-border {
     height: 60px;
     text-align: center;
     padding-top: 18px;
+}
+
+.panel-btn {
+    background: #F0F0F0;
+    border: 1px solid #E2E2E2;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px;
+}
+
+.panel {
+    margin-top: 20px;
+    border: 1px solid #E2E2E2;
+}
+
+.panel > .panel-header {
+    background: #F0F0F0;
+    padding: 6px 10px;
+}
+
+.panel > .panel-body {
+    padding: 6px 10px;
+    background: #fff;
+}
+
+.panel > .panel-footer {
+    padding: 6px 10px;
+    border-top: 1px solid #E2E2E2;
+    background: #fff;
+}
+
+.color-grey {
+    color: #B4B4B4;
+}
+.color-orage {
+    color: #F58E26;
+}
+.nav-arrow {
+
 }
