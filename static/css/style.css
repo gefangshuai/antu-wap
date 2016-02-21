@@ -486,3 +486,28 @@ ul.tab-nav > li.active > div.tab-nav-border {
 .nav-arrow {
 
 }
+.day-header {
+    margin-top: 15px;
+    padding: 8px 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.date-header {
+    margin-top: 15px;
+    padding: 8px 0;
+    background: #e5e5e5;
+    border: 1px solid #ddd;
+}
+.date-body {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+
+}
+.date {
+    cursor: pointer;
+    background: #e5e5e5;
+    margin: 1px;
+    padding: 10px 0;
+}
