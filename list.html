@@ -8,8 +8,13 @@
     <title>这才是公寓 - 安途</title>
     <link rel="stylesheet" href="static/css/mui.css">
     <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        .mask {
+            opacity: 0.4;
+        }
+    </style>
 </head>
-<body>
+<body style="">
 <header class="mui-bar mui-bar-nav bar-nav-black">
     <a class="back" href="index.html"></a>
     <h1 class="mui-title">成都</h1>
@@ -50,14 +55,16 @@
                 <li class="active" data-target="#t2">
                     <a href="#">配套</a>
                 </li>
-                <li data-target="#t3"><a href="#">宜居人数</a></li>
+                <li data-target="#t3">
+                    <a href="#">宜居人数</a>
+                </li>
             </ul>
             <button class="mui-btn mui-btn-block btn-red-alpha">不限
             </button>
         </div>
         <div class="choose-level-2">
-            <ul id="t1" class="mui-hidden">
-                <li class="active">
+            <ul id="t1" class="mui-hidden" data-type="muti">
+                <li class="active nolimit">
                     <a href="#">不限</a>
                 </li>
                 <li>
@@ -73,8 +80,8 @@
                     <a href="#">四居室</a>
                 </li>
             </ul>
-            <ul id="t2">
-                <li class="active">
+            <ul id="t2" data-type="single">
+                <li class="active nolimit">
                     <a href="#">不限</a>
                 </li>
                 <li>
@@ -108,8 +115,8 @@
                     <a href="#">洗衣机</a>
                 </li>
             </ul>
-            <ul id="t3" class="mui-hidden">
-                <li class="active">
+            <ul id="t3" class="mui-hidden" data-type="muti">
+                <li class="active nolimit">
                     <a href="#">不限</a>
                 </li>
                 <li>
@@ -218,11 +225,21 @@
             var $this = $(this);
             $this.addClass('active');
             var target = $this.data('target');
+            var $content = $('div.mui-content');
+            $content.addClass('mask');
+            $('body').css({'overflow': 'hidden'});
             $(target).siblings('div').hide();
-            $(target).slideToggle();
+            $(target).slideToggle(function () {
+                if ($(target).is(':hidden')) {
+                    $content.removeClass('mask');
+                    $('body').css({'overflow': 'auto'});
+                }
+            });
+
         });
 
         $('div.mui-content').click(function (e) {
+            $('div.mui-content').removeClass('mask');
             $('div.tab-sub-nav').slideUp();
         });
 
@@ -245,6 +262,16 @@
         $('.choose-level-2 li').on('click', function (e) {
             e.preventDefault();
             var $this = $(this);
+            var $ul = $this.closest('ul');
+            if ($ul.data('type') == 'muti') {
+                if ($this.hasClass('nolimit')) {
+                    $this.siblings().removeClass('active');
+                } else {
+                    $ul.find('.nolimit').removeClass('active');
+                }
+            }else if($ul.data('type') == 'single'){
+                $('.choose-level-2 li').removeClass('active');
+            }
             if ($this.hasClass('active')) {
                 $this.removeClass('active');
             } else {

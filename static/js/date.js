@@ -21,7 +21,7 @@
      * @returns {number}
      */
     function getWeeks(y, m) {
-        var fd = new Date(y, m - 1, 1)
+        var fd = new Date(y, m - 1, 1);
         var fday = fd.getDay();
         var fwd = 7 - fday;
         var weeks = 1;
@@ -81,7 +81,6 @@
 
         $('div.mui-content').append(html);
     };
-
 
     w.parseHtml = parseHtml;
 })(window);
