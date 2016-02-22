@@ -505,8 +505,15 @@ ul.tab-nav > li.active > div.tab-nav-border {
 
 }
 .date {
+    text-align: center;
     cursor: pointer;
     background: #e5e5e5;
     margin: 1px;
+    height: 60px;
     padding: 10px 0;
+}
+
+.date-tip {
+    display: block;
+    font-size: 12px;
 }

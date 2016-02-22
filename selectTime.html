@@ -43,15 +43,22 @@
 </div>
 <script src="static/jquery/jquery.min.js"></script>
 <script src="static/js/moment.js"></script>
+<script src="static/js/lodash.min.js"></script>
 <script src="static/js/date.js"></script>
 <script>
     var d = new Date();
     var year = d.getFullYear();
     var month = d.getMonth();
+    var galas = [{
+        month: 3,
+        date: 12,
+        gala: '植树节'
+    }];
 
-    parseHtml(year, month);
-    parseHtml(year, month + 1);
-    parseHtml(year, month + 2);
+
+    parseHtml(year, month, galas);
+    parseHtml(year, month + 1, galas);
+    parseHtml(year, month + 2, galas);
 </script>
 </body>
 </html>

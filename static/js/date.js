@@ -33,7 +33,16 @@
         return weeks;
     }
 
-    var parseHtml = function (year, month) {
+    /**
+     * 解析Html
+     * @param year
+     * @param month
+     * @param galas 节日，格式如：[{month: 3, date: 12, gala: '植树节'}, {month: 9, date: 10, gala: '教师节'}]
+     */
+    var parseHtml = function (year, month, galas) {
+
+        console.log(galas);
+
         if (isLeapYear(year))   // 如果是闰年，则为29天
             monthCountArray[1] = 29;
         var date = 1;
@@ -44,7 +53,6 @@
             + moment(firstDate).format('YYYY年M月')
             + '</div>'
         );
-        var day = firstDate.getDay();
         var html = '<div class="date-body">';
 
         var parseRow = function (day) {
@@ -58,7 +66,16 @@
 
             for (var i = 1; i <= 7 - day; i++) {
                 if (date <= big) {
-                    html += '<div class="flex-form-item mui-text-center date">' + date + '</div>';
+
+                    var obj = _.find(galas, {month: month + 1, date: date});
+                    var gala = obj ? obj.gala : '';
+
+                    html +=
+                        '<div class="flex-form-item mui-text-center date">'
+                        + date
+                        + '<span class="date-tip">' + gala + '</span>'
+                        + '</div>';
+
                     date++;
                 }
 
@@ -66,7 +83,7 @@
 
             if (date > big) {
                 var day = new Date(year, month, big).getDay();
-                for (var i = 0; i < 7 - day-1; i++) {
+                for (var i = 0; i < 7 - day - 1; i++) {
                     html += '<div class="flex-form-item mui-text-center date">' + '' + '</div>';
                 }
             }
