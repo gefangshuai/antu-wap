@@ -55,10 +55,45 @@
         gala: '植树节'
     }];
 
-
     parseHtml(year, month, galas);
     parseHtml(year, month + 1, galas);
     parseHtml(year, month + 2, galas);
+
+    $('.date[disabled="false"]').on('click', function () {
+        var $this = $(this);
+        var $dateTip = $this.find('span.date-tip');
+
+        var clear = function () {
+            $this.removeClass('active');
+            $this.removeAttr('id');
+            $dateTip.text($this.data('gala'));
+        };
+
+        if ($this.hasClass('active')) {
+            clear();
+        } else if ($('.date.active').length <= 1) {
+            $this.addClass('active');
+        }
+
+
+        if ($this.hasClass('active') && $('.date.active').length == 1) {
+            $dateTip.text('入住');
+            $this.attr('id', 'startDate');
+        }
+
+        if ($this.hasClass('active') && $('.date.active').length == 2) {
+            var $startDate = $('#startDate');
+            var begin = new Date($startDate.data('year'), $startDate.data('month'), $startDate.data('date'));
+            var end = new Date($this.data('year'), $this.data('month'), $this.data('date'));
+
+            if (end.getTime() > begin.getTime()) {
+                $dateTip.text('退房');
+                alert('后台开发提示：入住时间：' + begin + ', 退房时间：' + end);
+            } else {
+                clear();
+            }
+        }
+    });
 </script>
 </body>
 </html>

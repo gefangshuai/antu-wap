@@ -479,12 +479,15 @@ ul.tab-nav > li.active > div.tab-nav-border {
 .color-grey {
     color: #B4B4B4;
 }
+
 .color-orage {
     color: #F58E26;
 }
+
 .nav-arrow {
 
 }
+
 .day-header {
     margin-top: 15px;
     padding: 8px 10px;
@@ -498,12 +501,14 @@ ul.tab-nav > li.active > div.tab-nav-border {
     background: #e5e5e5;
     border: 1px solid #ddd;
 }
+
 .date-body {
     background: #fff;
     padding: 10px;
     border: 1px solid #ddd;
 
 }
+
 .date {
     text-align: center;
     cursor: pointer;
@@ -511,6 +516,15 @@ ul.tab-nav > li.active > div.tab-nav-border {
     margin: 1px;
     height: 60px;
     padding: 10px 0;
+}
+
+.date.active {
+    background: #FF5A5F;
+    color: #fff
+}
+
+.date[disabled="true"]{
+    opacity: 0.5;
 }
 
 .date-tip {

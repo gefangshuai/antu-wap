@@ -41,8 +41,6 @@
      */
     var parseHtml = function (year, month, galas) {
 
-        console.log(galas);
-
         if (isLeapYear(year))   // 如果是闰年，则为29天
             monthCountArray[1] = 29;
         var date = 1;
@@ -60,7 +58,7 @@
             if (day <= 7) {
                 html += '<div class="flex-form">';
                 for (var i = day; i >= 1; i--) {
-                    html += '<div class="flex-form-item mui-text-center date"></div>';
+                    html += '<div class="flex-form-item mui-text-center date" disabled="true"></div>';
                 }
             }
 
@@ -69,9 +67,17 @@
 
                     var obj = _.find(galas, {month: month + 1, date: date});
                     var gala = obj ? obj.gala : '';
+                    var current = new Date(year, month, date);
+                    var disabled = new Date().getTime() > current.getTime() ? true : false;
 
                     html +=
-                        '<div class="flex-form-item mui-text-center date">'
+                        '<div class="flex-form-item mui-text-center date " ' +
+                        'data-year="' + year + '" ' +
+                        'data-month="' + (month + 1) + '"' +
+                        'data-date="' + date + '"' +
+                        'data-gala="' + gala + '"' +
+                        'disabled="' + disabled + '"' +
+                        '>'
                         + date
                         + '<span class="date-tip">' + gala + '</span>'
                         + '</div>';
@@ -84,7 +90,7 @@
             if (date > big) {
                 var day = new Date(year, month, big).getDay();
                 for (var i = 0; i < 7 - day - 1; i++) {
-                    html += '<div class="flex-form-item mui-text-center date">' + '' + '</div>';
+                    html += '<div class="flex-form-item mui-text-center date" disabled="true">' + '' + '</div>';
                 }
             }
             html += '</div>';
