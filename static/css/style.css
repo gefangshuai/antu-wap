@@ -447,11 +447,11 @@ ul.tab-nav > li.active > div.tab-nav-border {
 
 .left-btn {
     background: url("../imgs/riqi_icon.png") no-repeat;
-    background-position-y: 5px;
+    background-position-y: 10px;
     background-position-x: 10px;
     color: #FF5A5F;
     width: 65%;
-    background-size: 48px;
+    background-size: 42px;
     float: left;
     font-size: 13px;
 
@@ -562,8 +562,8 @@ ul.tab-nav > li.active > div.tab-nav-border {
     cursor: pointer;
     background: #e5e5e5;
     margin: 1px;
-    height: 60px;
-    padding: 10px 0;
+    height: 48px;
+    padding: 12px 0;
 }
 
 .date.active {
@@ -577,7 +577,8 @@ ul.tab-nav > li.active > div.tab-nav-border {
 
 .date-tip {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
+    margin-top: -5px;
     font-weight: 600;
 }
 

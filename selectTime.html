@@ -66,6 +66,7 @@
         var clear = function () {
             $this.removeClass('active');
             $this.removeAttr('id');
+            $this.css('paddingTop', '12px');
             $dateTip.text($this.data('gala'));
         };
 
@@ -75,9 +76,9 @@
             $this.addClass('active');
         }
 
-
         if ($this.hasClass('active') && $('.date.active').length == 1) {
             $dateTip.text('入住');
+            $this.css('paddingTop', '5px');
             $this.attr('id', 'startDate');
         }
 
@@ -88,6 +89,7 @@
 
             if (end.getTime() > begin.getTime()) {
                 $dateTip.text('退房');
+                $this.css('paddingTop', '5px');
                 alert('后台开发提示：入住时间：' + begin + ', 退房时间：' + end);
             } else {
                 clear();
