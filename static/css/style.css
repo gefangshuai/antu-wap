@@ -116,6 +116,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
 }
 
+.font14 {
+    font-size: 14px;
+}
+.font16{
+    font-size: 16px;
+}
+
 .font20 {
     font-size: 20px;
 }
@@ -427,7 +434,13 @@ ul.tab-nav > li.active > div.tab-nav-border {
     width: 100%;
     background: #fff;
 }
-
+.order-footer {
+    position: fixed;
+    font-size: 16px;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
 .left-btn {
     background: url("../imgs/riqi_icon.png") no-repeat;
     background-position-y: 5px;
@@ -437,6 +450,17 @@ ul.tab-nav > li.active > div.tab-nav-border {
     background-size: 48px;
     float: left;
     padding: 10px 20px 5px 55px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.left-btn-black {
+    background: #505050;
+    width: 65%;
+    float: left;
+    text-align: center;
+    color: #fff;
+    padding: 10px 20px 8px 20px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -566,4 +590,8 @@ ul.tab-nav > li.active > div.tab-nav-border {
 }
 .form-pad {
     padding-top: 8px;
+}
+
+.margin20-t{
+    margin-top: 20px;
 }
