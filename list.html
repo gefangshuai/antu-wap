@@ -21,10 +21,10 @@
     <a href="user.html" class="nav-user"></a>
 </header>
 
-<div style="position: fixed; width: 100%; z-index: 999; top: 55px;" id="nav">
+<div style="position: fixed; width: 100%; z-index: 999; top: 45px;" id="nav">
     <ul class="mui-table-view mui-grid-view mui-grid-9 tab-nav" style="padding-top: 20px;">
         <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" data-target="#locations"
-            style="border-right: 2px solid #eee">
+            style="border-right: 2px solid #eee;">
             <a href="#" class="color-black font20">位置</a>
             <div class="tab-nav-border"></div>
         </li>
@@ -35,14 +35,14 @@
     </ul>
     <div id="locations" class="tab-sub-nav">
         <ul>
-            <li class="">
+            <li class="hidden-side">
                 <a href="#">九眼桥</a>
             </li>
-            <li>
+            <li class="hidden-side">
                 <a href="#">宽窄巷子</a>
             </li>
         </ul>
-        <button class="mui-btn mui-btn-block btn-red"
+        <button class="mui-btn mui-btn-block btn-red hidden-side"
                 style="padding: 15px 0; font-size: 16px; position: absolute; bottom: 0;">不限
         </button>
     </div>
@@ -59,7 +59,7 @@
                     <a href="#">宜居人数</a>
                 </li>
             </ul>
-            <button class="mui-btn mui-btn-block btn-red-alpha">不限
+            <button class="mui-btn mui-btn-block btn-red-alpha hidden-side">不限
             </button>
         </div>
         <div class="choose-level-2">
@@ -140,7 +140,7 @@
     </div>
 </div>
 
-<div class="mui-content" style="margin-top: 90px;">
+<div class="mui-content" style="margin-top: 70px;">
     <div class="mui-content-padded">
         <a href="detail.html" class="color-black">
             <ul class="mui-table-view margin20-b">
@@ -238,9 +238,10 @@
 
         });
 
-        $('div.mui-content').click(function (e) {
+        $('div.mui-content,.hidden-side').click(function (e) {
             $('div.mui-content').removeClass('mask');
             $('div.tab-sub-nav').slideUp();
+            $('body').css({'overflow': 'auto'});
         });
 
         $('#locations li').on('click', function (e) {
@@ -258,6 +259,8 @@
             $('.choose-level-2>ul').addClass('mui-hidden');
             $($this.data('target')).removeClass('mui-hidden');
         });
+
+
 
         $('.choose-level-2 li').on('click', function (e) {
             e.preventDefault();
