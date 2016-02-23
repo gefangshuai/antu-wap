@@ -95,10 +95,22 @@
             </div>
         </div>
     </div>
-    <button class="mui-btn btn-red-alpha mui-btn-block margin20-t" style="background: #fff">取消订单</button>
+    <a class="mui-btn btn-red-alpha mui-btn-block margin20-t" id="cancelOrder" href="#" style="background: #fff">取消订单</a>
 </div>
 <script src="static/jquery/jquery.min.js"></script>
+<script src="static/js/mui.min.js"></script>
 <script>
+    mui.init({});
+    $('#cancelOrder').on('click', function () {
+        var btnArray = ['取消', '确认'];
+        mui.confirm('确认要取消该订单吗？', ' ', btnArray, function (e) {
+            if (e.index == 1) {
+
+            } else {
+
+            }
+        });
+    });
 
 </script>
 </body>
