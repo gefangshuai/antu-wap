@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="">
+    <title>这才是公寓 - 安途</title>
+    <link rel="stylesheet" href="static/css/mui.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<header class="mui-bar mui-bar-nav bar-nav-black">
+    <a class="back" href="javascript:history.go(-1)"></a>
+    <h1 class="mui-title">
+        填写订单
+    </h1>
+</header>
+<div class="mui-content mui-content-padded">
+    <div class="day-header mui-text-center">
+        <h3 class="mui-content-padded">恋人岛酒店公寓</h3>
+        <p>
+            60平米 | 1室1厅1厨1卫 | 可住3人
+        </p>
+    </div>
+    <div class="panel">
+        <div class="panel-header"><b>入住信息</b></div>
+        <div class="panel-body">
+            <div class="flex-form">
+                <div class="flex-form-item">
+                    <div class="margin5-b">
+                        入住时间<span class="color-grey">：2016-01-28 12:00</span>
+                    </div>
+                    <div class="margin5-b">
+                        退房时间<span class="color-grey">：2016-01-30 12:00</span>
+                    </div>
+                </div>
+                <div class="flex-form-item mui-text-right" style="font-size: 22px; padding-top: 20px;">
+                    共： 3 晚
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="margin5-t mui-pull-left">预订数量:</div>
+            <div class="mui-pull-right">
+                <button id="preNumBtn" type="button"></button>
+                <input id="numValue" type="number" value="1"/>
+                <button id="nextNumBtn" type="button"></button>
+            </div>
+            <div class="mui-clearfix"></div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-header"><b>入住人信息</b></div>
+        <div class="panel-body">
+            <table style="width: 99%; margin: 10px;">
+                <tr>
+                    <td align="right" width="100" class="pad20-b">
+                        <span class="color-red">*</span>入住人姓名：
+                    </td>
+                    <td>
+                        <input id='account' type="text" >
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="pad20-b">
+                        <span class="color-red">*</span>手机号码：
+                    </td>
+                    <td style="vertical-align: middle">
+                        <input id='mobile' type="text">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
+<script src="static/jquery/jquery.min.js"></script>
+<script>
+    (function () {
+        var $preNumBtn = $('#preNumBtn');
+        var $nextNumBtn = $('#nextNumBtn');
+        var $numValue = $('#numValue');
+
+        $preNumBtn.on('click', function (e) {
+            e.preventDefault();
+            var val = Number($numValue.val()) || 1;
+            if (val > 1) {
+                $numValue.val((val - 1));
+            }
+        });
+
+        $nextNumBtn.on('click', function (e) {
+            e.preventDefault();
+            var val = Number($numValue.val()) || 1;
+            $numValue.val((val + 1));
+        });
+    })();
+</script>
+</body>
+</html>

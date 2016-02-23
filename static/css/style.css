@@ -100,6 +100,9 @@ h1, h2, h3, h4, h5, h6 {
 .pad20 {
     padding: 20px;
 }
+.pad20-b {
+    padding-bottom: 20px;
+}
 
 .pad10-tb {
     padding: 10px 0px;
@@ -462,16 +465,19 @@ ul.tab-nav > li.active > div.tab-nav-border {
 
 .panel > .panel-header {
     background: #F0F0F0;
-    padding: 6px 10px;
+    color: #979797;
+    padding: 8px 10px;
 }
 
 .panel > .panel-body {
-    padding: 6px 10px;
+    padding: 10px 15px;
+    font-size: 15px;
     background: #fff;
 }
 
 .panel > .panel-footer {
     padding: 6px 10px;
+    font-size: 15px;
     border-top: 1px solid #E2E2E2;
     background: #fff;
 }
@@ -523,11 +529,37 @@ ul.tab-nav > li.active > div.tab-nav-border {
     color: #fff
 }
 
-.date[disabled="true"]{
+.date[disabled="true"] {
     opacity: 0.5;
 }
 
 .date-tip {
     display: block;
     font-size: 12px;
+}
+#preNumBtn {
+    background: url('../imgs/js_icon_per.png');
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+}
+
+#nextNumBtn {
+    background: url('../imgs/zj_icon_nor.png');
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+}
+#numValue {
+    width: 25px;
+    height: 25px;
+    margin-bottom: -20px;
+    border:  none;
+    padding: 0px 0px 0px 10px;
+}
+.margin5-t {
+    margin-top: 5px;
+}
+.form-pad {
+    padding-top: 8px;
 }
