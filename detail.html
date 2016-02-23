@@ -16,10 +16,46 @@
     <a href="user.html" class="nav-user"></a>
 </header>
 
-<div class="mui-content" style="margin-bottom: 40px;">
+<div class="mui-content" style="margin-bottom: 20px;">
     <div>
-        <img src="static/imgs/banner_xqy.png" alt="" class="image">
-        <div class="banner-count">1/12</div>
+        <div id="slider" class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="static/imgs/banner_xqy.png">
+                    </a>
+                </div>
+                <!-- 第一张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="static/imgs/banner_xqy.png">
+                    </a>
+                </div>
+                <!-- 第二张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="static/imgs/banner_xqy.png">
+                    </a>
+                </div>
+                <!-- 第三张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="static/imgs/banner_xqy.png">
+                    </a>
+                </div>
+
+                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="static/imgs/banner_xqy.png">
+                    </a>
+                </div>
+            </div>
+
+            <div class="banner-count"><span id="sideNumber">1</span>/3</div>
+        </div>
+
     </div>
     <div class="inline">
         <span class="mui-pull-left  color-red">
@@ -92,5 +128,17 @@
         立即预定
     </a>
 </div>
+
+
+<script src="static/js/mui.min.js"></script>
+<script>
+    mui.init({});
+    var slider = mui("#slider");
+    slider.slider({});
+
+    document.querySelector('.mui-slider').addEventListener('slide', function (event) {
+        document.querySelector('#sideNumber').innerText = event.detail.slideNumber +1;
+    });
+</script>
 </body>
 </html>
