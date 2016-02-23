@@ -449,6 +449,8 @@ ul.tab-nav > li.active > div.tab-nav-border {
     width: 65%;
     background-size: 48px;
     float: left;
+    font-size: 13px;
+
     padding: 10px 20px 5px 55px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -460,7 +462,7 @@ ul.tab-nav > li.active > div.tab-nav-border {
     float: left;
     text-align: center;
     color: #fff;
-    padding: 10px 20px 8px 20px;
+    padding: 7px 20px 8px 20px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -473,7 +475,7 @@ ul.tab-nav > li.active > div.tab-nav-border {
     font-size: 18px;
     font-weight: 600;
     float: right;
-    height: 60px;
+    height: 57px;
     text-align: center;
     padding-top: 18px;
 }
@@ -501,6 +503,12 @@ ul.tab-nav > li.active > div.tab-nav-border {
     padding: 10px 15px;
     font-size: 15px;
     background: #fff;
+}
+
+.with-navgate {
+    background: url('../imgs/ic_jrxq.png') no-repeat;
+    background-size: 32px;
+    background-position: right;
 }
 
 .panel > .panel-footer {
