@@ -595,3 +595,6 @@ ul.tab-nav > li.active > div.tab-nav-border {
 .margin20-t{
     margin-top: 20px;
 }
+input.border-red {
+    border: 1px solid #FF5A5F;
+}
