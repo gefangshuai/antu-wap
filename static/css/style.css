@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-red-alpha {
     border: 1px solid #FF5A5F;
-    color: #000;
+    color: #FF5A5F;
     background: #F0F0F0;
 }
 
@@ -563,7 +563,8 @@ ul.tab-nav > li.active > div.tab-nav-border {
 
 .date-tip {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 600;
 }
 #preNumBtn {
     background: url('../imgs/js_icon_per.png');
