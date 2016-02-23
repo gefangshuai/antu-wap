@@ -12,7 +12,7 @@
 <body>
 <header class="mui-bar mui-bar-nav bar-nav-black">
     <a class="back" href="javascript:history.go(-1)"></a>
-    <h1 class="mui-title">待支付</h1>
+    <h1 class="mui-title">已退房</h1>
 </header>
 <div class="mui-content mui-content-padded">
     <div class="panel">
@@ -95,22 +95,12 @@
             </div>
         </div>
     </div>
-    <a class="mui-btn btn-red-alpha mui-btn-block margin20-t" id="cancelOrder" href="#" style="background: #fff">取消订单</a>
 </div>
 <script src="static/jquery/jquery.min.js"></script>
 <script src="static/js/mui.min.js"></script>
 <script>
     mui.init({});
-    $('#cancelOrder').on('click', function () {
-        var btnArray = ['取消', '确认'];
-        mui.confirm('确认要取消该订单吗？', ' ', btnArray, function (e) {
-            if (e.index == 1) {
 
-            } else {
-
-            }
-        });
-    });
 
 </script>
 </body>
