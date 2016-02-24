@@ -131,7 +131,7 @@
                     <a href="#">5人</a>
                 </li>
             </ul>
-            <button class="mui-btn mui-btn-block btn-red">
+            <button class="mui-btn mui-btn-block btn-red" id="level2Ok">
                 确定
             </button>
         </div>
@@ -238,6 +238,15 @@
         });
 
         $('div.mui-content,.hidden-side').click(function (e) {
+
+            if($(this).closest('#locations')) {
+                $('#locations li').removeClass('active');
+            }
+            if($(this).closest('#choose')){
+                $('#choose li').removeClass('active');
+                $('#choose .nolimit').addClass('active');
+            }
+
             $('div.mui-content').removeClass('mask');
             $('div.tab-sub-nav').slideUp();
             $('body').css({'overflow': 'auto'});
@@ -259,7 +268,12 @@
             $($this.data('target')).removeClass('mui-hidden');
         });
 
-
+        $('#level2Ok').on('click', function (e) {
+            e.preventDefault();
+            $('div.mui-content').removeClass('mask');
+            $('div.tab-sub-nav').slideUp();
+            $('body').css({'overflow': 'auto'});
+        });
 
         $('.choose-level-2 li').on('click', function (e) {
             e.preventDefault();
@@ -271,8 +285,8 @@
                 } else {
                     $ul.find('.nolimit').removeClass('active');
                 }
-            }else if($ul.data('type') == 'single'){
-                $('.choose-level-2 li').removeClass('active');
+            } else if ($ul.data('type') == 'single') {
+                $ul.find('li').removeClass('active');
             }
             if ($this.hasClass('active')) {
                 $this.removeClass('active');
