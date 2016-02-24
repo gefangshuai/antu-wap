@@ -854,5 +854,15 @@ dd {
     background: #fff;
     border: 1px solid #FF5A5F;
     color: #FF5A5F;
-    padding: 8px 50px;
+    padding: 8px 50px 0px;
+}
+
+div.more {
+    background: url('../imgs/more_icon.png');
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: 0 -2px;
+    float: left;
+    width: 32px;
+    height: 32px;
 }
