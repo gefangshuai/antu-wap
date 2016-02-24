@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="">
+    <title>这才是公寓 - 安途</title>
+    <link rel="stylesheet" href="static/css/mui.css">
+    <link rel="stylesheet" href="static/css/style.min.css">
+</head>
+<body>
+<header class="mui-bar mui-bar-nav bar-nav-black">
+    <a class="back" href="javascript:history.go(-1)"></a>
+    <h1 class="mui-title">
+        入住退房时间选择
+    </h1>
+</header>
+<div class="mui-content">
+    <div class="day-header flex-form">
+        <div class="flex-form-item mui-text-center">日</div>
+        <div class="flex-form-item mui-text-center">一</div>
+        <div class="flex-form-item mui-text-center">二</div>
+        <div class="flex-form-item mui-text-center">三</div>
+        <div class="flex-form-item mui-text-center">四</div>
+        <div class="flex-form-item mui-text-center">五</div>
+        <div class="flex-form-item mui-text-center">六</div>
+    </div>
+
+
+    <!--<div class="flex-form">
+        <div class="flex-form-item mui-text-center date"></div>
+        <div class="flex-form-item mui-text-center date"></div>
+        <div class="flex-form-item mui-text-center date">1</div>
+        <div class="flex-form-item mui-text-center date">2</div>
+        <div class="flex-form-item mui-text-center date">3</div>
+        <div class="flex-form-item mui-text-center date">4</div>
+        <div class="flex-form-item mui-text-center date">5</div>
+    </div>-->
+
+</div>
+
+</div>
+<script src="static/jquery/jquery.min.js"></script>
+<script src="static/js/moment.js"></script>
+<script src="static/js/lodash.min.js"></script>
+<script src="static/js/date.js"></script>
+<script>
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth();
+    var galas = [{
+
+    }];
+
+    parseHtml(year, month, galas);
+    parseHtml(year, month + 1, galas);
+    parseHtml(year, month + 2, galas);
+
+    $('.date[disabled="false"]').on('click', function () {
+        var $this = $(this);
+        var $dateTip = $this.find('span.date-tip');
+
+        var clear = function () {
+            $this.removeClass('active');
+            $this.removeAttr('id');
+            $this.css('paddingTop', '12px');
+            $dateTip.text($this.data('gala'));
+        };
+
+        if ($this.hasClass('active')) {
+            clear();
+        } else if ($('.date.active').length <= 1) {
+            $this.addClass('active');
+        }
+
+        if ($this.hasClass('active') && $('.date.active').length == 1) {
+            $dateTip.text('入住');
+            $this.css('paddingTop', '5px');
+            $this.attr('id', 'startDate');
+        }
+
+        if ($this.hasClass('active') && $('.date.active').length == 2) {
+            var $startDate = $('#startDate');
+            var begin = new Date($startDate.data('year'), $startDate.data('month'), $startDate.data('date'));
+            var end = new Date($this.data('year'), $this.data('month'), $this.data('date'));
+
+            if (end.getTime() > begin.getTime()) {
+                $dateTip.text('退房');
+                $this.css('paddingTop', '5px');
+                alert('后台开发提示：入住时间：' + begin + ', 退房时间：' + end);
+            } else {
+                clear();
+            }
+        }
+    });
+</script>
+</body>
+</html>
