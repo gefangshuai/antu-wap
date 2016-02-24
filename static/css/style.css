@@ -46,6 +46,15 @@ h1, h2, h3, h4, h5, h6 {
     top: 10px;
 }
 
+.close {
+    background: url('../imgs/qx_icon.png') no-repeat;
+    background-size: 44px 44px;
+    position: absolute;
+    width: 94px;
+    height: 44px;
+    top: 10px;
+}
+
 .border-right {
     border-right: 1px solid #eee;
 }
@@ -92,15 +101,29 @@ h1, h2, h3, h4, h5, h6 {
 .pad20-t {
     padding-top: 20px;
 }
+
 .mui-grid-view.mui-grid-9 .mui-media {
     color: #000;
 }
+
 .pad20-r {
     padding-right: 20px;
 }
 
 .pad20 {
     padding: 20px;
+}
+
+.color-green {
+    color: #A9D282;
+}
+
+.pad30 {
+    padding: 30px;
+}
+
+.color-grey2 {
+    color: #757575;
 }
 
 .pad20-b {
@@ -151,8 +174,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: all;
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
-    -webkit-transition-duration: .2s;
-    transition-duration: .2s;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
     text-align: center;
     vertical-align: top;
     white-space: nowrap;
@@ -171,6 +194,8 @@ h1, h2, h3, h4, h5, h6 {
     background: #51BFFE;
     color: #fff;
 }
+
+
 
 .btn-red {
     background: #FF5A5F;

@@ -14,7 +14,7 @@
     <a class="back" href="javascript:history.go(-1)"></a>
     <h1 class="mui-title">待支付</h1>
 </header>
-<div class="mui-content mui-content-padded">
+<div class="mui-content mui-content-padded" style="margin-bottom: 60px;">
     <div class="panel">
         <div class="panel-body">
             <div class="nav-arrow">
@@ -97,6 +97,13 @@
     </div>
     <a class="mui-btn btn-red-alpha mui-btn-block margin20-t" id="cancelOrder" href="#" style="background: #fff">取消订单</a>
 </div>
+
+<div class="detail-footer">
+    <a class="mui-btn mui-btn-block btn-red" href="payDeposit.html" style="padding-top: 10px; padding-bottom: 10px;">
+        支付定金
+    </a>
+</div>
+
 <script src="static/jquery/jquery.min.js"></script>
 <script src="static/js/mui.min.js"></script>
 <script>
@@ -112,6 +119,18 @@
         });
     });
 
+    $('#payDeposit').on('click', function (e) {
+        e.preventDefault();
+        /*var btnArray = ['取消', '确认'];
+        mui.confirm('订单已支付订金，取消订单将根据预订条款扣除订金，确认取消吗？', ' ', btnArray, function (e) {
+            if (e.index == 1) {
+
+            } else {
+
+            }
+        });*/
+        location.href = 'payDeposit.html';
+    });
 </script>
 </body>
 </html>
