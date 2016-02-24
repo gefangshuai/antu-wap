@@ -216,7 +216,9 @@
                     </div>
                 </div>
                 <div class="flex-form-item">
-
+                    <div class="icon icon-tc icon-disabled">
+                        免费停车
+                    </div>
                 </div>
             </div>
         </div>
@@ -273,8 +275,13 @@
 <div style="margin-bottom: 60px;"></div>
 <div class="detail-footer">
     <a class="left-btn" href="selectTime.html">
-        <div>入住时间：2016-01-28</div>
-        <div>退房时间：2016-01-30</div>
+        <div style="width: 230px; margin: 0 auto;">
+            <div class="left-btn-icon"></div>
+            <div class="mui-pull-left">
+                <div>入住时间：2016-01-28</div>
+                <div>退房时间：2016-01-30</div>
+            </div>
+        </div>
     </a>
     <a class="right-btn" href="order1.html">
         立即预定
@@ -286,7 +293,9 @@
 <script>
     mui.init({});
     var slider = mui("#slider");
-    slider.slider({});
+    slider.slider({
+        interval: 2000
+    });
 
     document.querySelector('.mui-slider').addEventListener('slide', function (event) {
         document.querySelector('#sideNumber').innerText = event.detail.slideNumber + 1;

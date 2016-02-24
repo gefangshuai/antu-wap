@@ -471,18 +471,25 @@ ul.tab-nav > li.active > div.tab-nav-border {
 }
 
 .left-btn {
-    background: url("../imgs/riqi_icon.png") no-repeat;
-    background-position-y: 10px;
-    background-position-x: 10px;
+    text-align: center;
     color: #FF5A5F;
     width: 65%;
-    background-size: 42px;
     float: left;
-    font-size: 13px;
-
-    padding: 10px 20px 5px 55px;
+    font-size: 16px;
+    padding: 8px 0px 0px 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.left-btn-icon{
+    float: left;
+    height: 48px;
+    width: 48px;
+    margin-right: 10px;
+    background: url("../imgs/riqi_icon.png") no-repeat;
+    background-position-y: 0px;
+    background-position-x: 10px;
+    background-size: 44px;
 }
 
 .left-btn-black {
@@ -501,8 +508,8 @@ ul.tab-nav > li.active > div.tab-nav-border {
     width: 35%;
     background: #FF5A5F;
     color: #fff;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 800;
     float: right;
     height: 57px;
     text-align: center;
@@ -770,7 +777,7 @@ dd {
     height: 35px;
     color: #757575;
     background-repeat: no-repeat;
-    background-position: -5px 0px;
+    background-position: -3px 0px;
     background-size: 28px;
     padding-left: 30px;
     padding-top: 3px;
@@ -831,6 +838,16 @@ dd {
 
 .icon-zc {
     background-image: url('../imgs/zc_icon_nor.png');
+}
+
+.icon-tc{
+    background-image: url('../imgs/tc_ic.png');
+    background-size: 22px;
+    background-position: 1px 3px;
+}
+
+.icon-disabled {
+    opacity: 0.4;
 }
 
 .border-left-red {
