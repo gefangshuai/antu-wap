@@ -387,9 +387,9 @@ ul.tab-nav > li.active > div.tab-nav-border {
 .inline {
     display: block;
     vertical-align: middle;
-    height: 65px;
+    height: 42px;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     background: #fff;
     z-index: inherit;
 }
