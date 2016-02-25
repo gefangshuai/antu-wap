@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="">
+    <title>这才是公寓 - 安途</title>
+    <link rel="stylesheet" href="static/css/mui.css">
+    <link rel="stylesheet" href="static/css/style.min.css">
+</head>
+<body>
+<header class="mui-bar mui-bar-nav bar-nav-black">
+    <a class="back" href="index.html"></a>
+    <h1 class="mui-title">手机动态密码登录</h1>
+</header>
+<div class="mui-content">
+    <form class="" style="margin: 40px 20px;" action="#" method="post">
+        <div class="flex-form">
+            <div style="width: 60px;">
+                <input type="text" style="border-right: 0px;" value="+86">
+            </div>
+            <div class="flex-form-item">
+                <input type="text" placeholder="请输入手机号" id="mobile">
+            </div>
+        </div>
+        <div class="flex-form">
+            <p class="color-red mui-hidden">手机号输入不正确</p>
+        </div>
+        <div class="flex-form">
+            <div class="flex-form-item pad20-r">
+                <input type="password" placeholder="请输入验证码">
+                <p class="color-red  mui-hidden">验证码输入不正确</p>
+            </div>
+            <div class="flex-form-item ">
+                <button type="button" class="mui-btn mui-btn-block btn-blue" id="getCode">获取验证码</button>
+            </div>
+        </div>
+        <div class="flex-form">
+            <div class="flex-form-item">
+                <button type="submit" class="mui-btn mui-btn-block btn-red">登录</button>
+            </div>
+        </div>
+        <p class="pad10-tb">
+            点击 <span class="color-red">[登录]</span> 按钮，代表你已阅读并同意 <a href=""><span class="color-black">安途租客协议</span></a>
+        </p>
+    </form>
+</div>
+<script src="static/jquery/jquery.min.js"></script>
+<script>
+    $('form').submit(function () {
+        $('p').removeClass('mui-hidden');
+        $('input').css('border-color', '#FF5A5F');
+        $('#mobile').css('border-left-color', '#CCCCCC');
+        return false;
+    });
+
+    $('#getCode').on('click', function () {
+        var $this = $(this);
+        if(!$this.hasClass('btn-grey')){
+            $this.addClass('btn-grey');
+            var i = 180;
+            var intl = setInterval(function () {
+                i = i - 1;
+                $this.text('重新获取('+i+'s)');
+                if (i == 0) {
+                    clearInterval(intl);
+                    $this.removeClass('btn-grey');
+                    $this.text('获取验证码');
+                }
+            }, 1000);
+        }
+    });
+</script>
+
+</body>
+</html>
