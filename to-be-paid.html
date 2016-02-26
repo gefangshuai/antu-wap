@@ -8,6 +8,13 @@
     <title>这才是公寓 - 安途</title>
     <link rel="stylesheet" href="static/css/mui.css">
     <link rel="stylesheet" href="static/css/style.min.css">
+    <style>
+        .mui-content-padded {
+            margin: 20px;
+        }
+
+
+    </style>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav bar-nav-black">
@@ -78,10 +85,12 @@
         <div class="panel-body">
             <div class="flex-form ">
                 <div class="flex-form-item mui-text-center" style="padding: 10px 30px">
-                    <div>如取消订单</div><div>订金全部退还</div>
+                    <div>如取消订单</div>
+                    <div>订金全部退还</div>
                 </div>
                 <div class="flex-form-item mui-text-center" style="padding: 10px 30px">
-                    <div>如取消订单</div><div>扣除首天房费</div>
+                    <div>如取消订单</div>
+                    <div>扣除首天房费</div>
                 </div>
             </div>
             <div class="cancel-order"></div>
@@ -95,7 +104,8 @@
             </div>
         </div>
     </div>
-    <a class="mui-btn btn-red-alpha mui-btn-block margin20-t" id="cancelOrder" href="#" style="background: #fff">取消订单</a>
+    <a class="mui-btn btn-red-alpha mui-btn-block margin20-t" id="cancelOrder" href="#"
+       style="background: #fff">取消订单</a>
 </div>
 
 <div class="detail-footer">
@@ -122,13 +132,13 @@
     $('#payDeposit').on('click', function (e) {
         e.preventDefault();
         /*var btnArray = ['取消', '确认'];
-        mui.confirm('订单已支付订金，取消订单将根据预订条款扣除订金，确认取消吗？', ' ', btnArray, function (e) {
-            if (e.index == 1) {
+         mui.confirm('订单已支付订金，取消订单将根据预订条款扣除订金，确认取消吗？', ' ', btnArray, function (e) {
+         if (e.index == 1) {
 
-            } else {
+         } else {
 
-            }
-        });*/
+         }
+         });*/
         location.href = 'payDeposit.html';
     });
 </script>
