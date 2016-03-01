@@ -34,13 +34,30 @@
         </li>
     </ul>
     <div id="locations" class="tab-sub-nav">
-        <ul style="margin-top: 0px;">
+        <ul style="margin-top: 0px; height: 230px;overflow: auto;">
             <li class="hidden-side">
                 <a href="#">九眼桥</a>
             </li>
             <li class="hidden-side">
                 <a href="#">宽窄巷子</a>
             </li>
+            <li class="hidden-side">
+                <a href="#">宽窄巷子</a>
+            </li>
+            <li class="hidden-side">
+                <a href="#">宽窄巷子</a>
+            </li>
+            <li class="hidden-side">
+                <a href="#">宽窄巷子</a>
+            </li>
+            <li class="hidden-side">
+                <a href="#">宽窄巷子</a>
+            </li>
+            <li class="hidden-side">
+                <a href="#">宽窄巷子2</a>
+            </li>
+
+
         </ul>
         <button class="mui-btn mui-btn-block btn-red hidden-side"
                 style="padding: 15px 0; font-size: 16px; position: absolute; bottom: 0;">不限
@@ -239,10 +256,10 @@
 
         $('div.mui-content,.hidden-side').click(function (e) {
 
-            if($(this).closest('#locations')) {
+            if ($(this).closest('#locations')) {
                 $('#locations li').removeClass('active');
             }
-            if($(this).closest('#choose')){
+            if ($(this).closest('#choose')) {
                 $('#choose li').removeClass('active');
                 $('#choose .nolimit').addClass('active');
             }
