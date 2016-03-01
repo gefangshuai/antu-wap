@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="static/css/style.min.css">
     <style>
         .mui-content-padded {
-            margin: 20px;
+            margin: 10px;
         }
 
         dl.dl-horizontal {
-            margin-left: -50px;
+            margin-left: -80px;
         }
 
         dt, dd {
-            margin-bottom: 10px;
-            font-size: 22px;
+            margin-bottom: 5px;
+            font-size: 14px;
         }
 
         dt {
@@ -35,12 +35,12 @@
 <body>
 <header class="mui-bar mui-bar-nav bar-nav-black">
     <a class="back" href="javascript:history.go(-1)"></a>
-    <h1 class="mui-title">支付订金</h1>
+    <h1 class="mui-title"></h1>
     <a href="user.html" class="nav-user"></a>
 </header>
 <div class="mui-content mui-content-padded">
     <div class="panel">
-        <div class="panel-body" style="padding: 10px 20px 20px 20px;">
+        <div class="panel-body" style="padding: 10px ;">
             <dl class="dl-horizontal margin20-t">
                 <dt>订单号：</dt>
                 <dd>20657579191234</dd>
@@ -64,15 +64,61 @@
         </div>
     </div>
 
-    <div class="panel">
+
+</div>
+<div id="resbody">
+    <div class="panel" style="margin: 0 10px;">
         <div class="panel-body">
-            <img src="static/imgs/erweimaandxiangqingpng.png" alt="" class="image margin20-t">
+            <div class="flex-form">
+                <div style="width: 35%; padding: 10px; text-align: center; margin-top: 10px;">
+                    <img src="static/imgs/ewm01_img.png" class="image">
+                    <div>
+                        <small>安途官方客服</small>
+                    </div>
+                    <small>
+                        antu006
+                    </small>
+                </div>
+                <div class="" style="width: 30px;">
+                    <img src="static/imgs/kf_ic.png" alt="" style="width: 30px; height: 180px;">
+                </div>
+                <div class="flex-form-item">
+
+                    <div class="mui-pull-right" style="width: 95%; font-size: 12px; margin-bottom: 5px;">
+                        提前加微信，才能体验安小兔带给您的顺畅服务哦。
+                    </div>
+                    <div class="mui-clearfix"></div>
+
+                    <div class="mui-pull-right" style="width: 95%; font-size: 12px; margin-bottom: 10px;">
+                        入住前一天，安小兔会把房间号通过短信发给您。
+                    </div>
+
+                    <div class="mui-clearfix"></div>
+
+                    <div class="mui-pull-right" style="width: 95%; font-size: 12px; margin-bottom: 5px;">
+                        到店后向管家支付尾款和200元押金，就能召唤专属服务。
+                    </div>
+                    <div class="mui-clearfix"></div>
+
+                    <div class="mui-pull-right" style="width: 95%; font-size: 12px; margin-bottom: 15px;">
+                        无论您使用支付宝还是微信支付，安小兔都不会拒绝的~
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <script src="static/jquery/jquery.min.js"></script>
+<script src="static/js/pageResponse.min.js"></script>
 <script>
-
+    window.onload = window.onresize = function(){
+        pageResponse({
+            selectors : '#resbody',     //模块选择器，使用querySelectorAll的方法
+            mode : 'auto',     // auto || contain || cover
+            width : '365',      //输入页面的宽度，只支持输入数值，默认宽度为320px
+            height : '227'      //输入页面的高度，只支持输入数值，默认高度为504px
+        })
+    }
 </script>
 </body>
 </html>
